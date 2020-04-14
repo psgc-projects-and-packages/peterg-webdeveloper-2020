@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_001211) do
+ActiveRecord::Schema.define(version: 2020_04_14_020957) do
 
   create_table "monthperiods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "guid"
@@ -25,4 +25,23 @@ ActiveRecord::Schema.define(version: 2020_04_14_001211) do
     t.index ["slug"], name: "index_monthperiods_on_slug", unique: true
   end
 
+  create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "guid"
+    t.string "slug"
+    t.string "ptitle", null: false
+    t.string "psubtitle"
+    t.text "body"
+    t.string "client"
+    t.bigint "startdate_id"
+    t.bigint "enddate_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["enddate_id"], name: "index_projects_on_enddate_id"
+    t.index ["guid"], name: "index_projects_on_guid", unique: true
+    t.index ["slug"], name: "index_projects_on_slug", unique: true
+    t.index ["startdate_id"], name: "index_projects_on_startdate_id"
+  end
+
+  add_foreign_key "projects", "monthperiods", column: "enddate_id"
+  add_foreign_key "projects", "monthperiods", column: "startdate_id"
 end

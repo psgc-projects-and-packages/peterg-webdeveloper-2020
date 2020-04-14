@@ -1,17 +1,332 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  guid: 123
-  slug: foo
-  period_year: MyString
+---
+1:
+  guid: 
+  slug: 
+  period_year: '2019'
   month_number: 1
-  start_date: 2020-04-13
-  end_date: 2020-04-13
-
-two:
-  guid: 789
-  slug: bar
-  period_year: MyString
+  start_date: 2019-01-01
+  end_date: 2019-01-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-04-14 02:02:56.119517000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-04-14 02:02:56.119517000 Z
+    zone: *2
+    time: *3
+2:
+  guid: 
+  slug: 
+  period_year: '2019'
   month_number: 2
-  start_date: 2020-04-13
-  end_date: 2020-04-13
+  start_date: 2019-02-01
+  end_date: 2019-02-28
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2020-04-14 02:02:56.129866000 Z
+    zone: *2
+    time: *4
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2020-04-14 02:02:56.129866000 Z
+    zone: *2
+    time: *5
+3:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 3
+  start_date: 2019-03-01
+  end_date: 2019-03-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2020-04-14 02:02:56.135500000 Z
+    zone: *2
+    time: *6
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2020-04-14 02:02:56.135500000 Z
+    zone: *2
+    time: *7
+4:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 4
+  start_date: 2019-04-01
+  end_date: 2019-04-30
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2020-04-14 02:02:56.146434000 Z
+    zone: *2
+    time: *8
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2020-04-14 02:02:56.146434000 Z
+    zone: *2
+    time: *9
+5:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 5
+  start_date: 2019-05-01
+  end_date: 2019-05-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &10 2020-04-14 02:02:56.149148000 Z
+    zone: *2
+    time: *10
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &11 2020-04-14 02:02:56.149148000 Z
+    zone: *2
+    time: *11
+6:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 6
+  start_date: 2019-06-01
+  end_date: 2019-06-30
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &12 2020-04-14 02:02:56.151850000 Z
+    zone: *2
+    time: *12
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &13 2020-04-14 02:02:56.151850000 Z
+    zone: *2
+    time: *13
+7:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 7
+  start_date: 2019-07-01
+  end_date: 2019-07-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &14 2020-04-14 02:02:56.154833000 Z
+    zone: *2
+    time: *14
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &15 2020-04-14 02:02:56.154833000 Z
+    zone: *2
+    time: *15
+8:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 8
+  start_date: 2019-08-01
+  end_date: 2019-08-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &16 2020-04-14 02:02:56.157513000 Z
+    zone: *2
+    time: *16
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &17 2020-04-14 02:02:56.157513000 Z
+    zone: *2
+    time: *17
+9:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 9
+  start_date: 2019-09-01
+  end_date: 2019-09-30
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &18 2020-04-14 02:02:56.160147000 Z
+    zone: *2
+    time: *18
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &19 2020-04-14 02:02:56.160147000 Z
+    zone: *2
+    time: *19
+10:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 10
+  start_date: 2019-10-01
+  end_date: 2019-10-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &20 2020-04-14 02:02:56.162728000 Z
+    zone: *2
+    time: *20
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &21 2020-04-14 02:02:56.162728000 Z
+    zone: *2
+    time: *21
+11:
+  guid: 
+  slug: 
+  period_year: '2019'
+  month_number: 11
+  start_date: 2019-11-01
+  end_date: 2019-11-30
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &22 2020-04-14 02:02:56.165280000 Z
+    zone: *2
+    time: *22
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &23 2020-04-14 02:02:56.165280000 Z
+    zone: *2
+    time: *23
+12:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 1
+  start_date: 2020-01-01
+  end_date: 2020-01-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &24 2020-04-14 02:02:56.167946000 Z
+    zone: *2
+    time: *24
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &25 2020-04-14 02:02:56.167946000 Z
+    zone: *2
+    time: *25
+13:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 2
+  start_date: 2020-02-01
+  end_date: 2020-02-29
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &26 2020-04-14 02:02:56.170623000 Z
+    zone: *2
+    time: *26
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &27 2020-04-14 02:02:56.170623000 Z
+    zone: *2
+    time: *27
+14:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 3
+  start_date: 2020-03-01
+  end_date: 2020-03-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &28 2020-04-14 02:02:56.173252000 Z
+    zone: *2
+    time: *28
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &29 2020-04-14 02:02:56.173252000 Z
+    zone: *2
+    time: *29
+15:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 4
+  start_date: 2020-04-01
+  end_date: 2020-04-30
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &30 2020-04-14 02:02:56.175826000 Z
+    zone: *2
+    time: *30
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &31 2020-04-14 02:02:56.175826000 Z
+    zone: *2
+    time: *31
+16:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 5
+  start_date: 2020-05-01
+  end_date: 2020-05-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &32 2020-04-14 02:02:56.178471000 Z
+    zone: *2
+    time: *32
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &33 2020-04-14 02:02:56.178471000 Z
+    zone: *2
+    time: *33
+17:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 6
+  start_date: 2020-06-01
+  end_date: 2020-06-30
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &34 2020-04-14 02:02:56.181094000 Z
+    zone: *2
+    time: *34
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &35 2020-04-14 02:02:56.181094000 Z
+    zone: *2
+    time: *35
+18:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 7
+  start_date: 2020-07-01
+  end_date: 2020-07-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &36 2020-04-14 02:02:56.183623000 Z
+    zone: *2
+    time: *36
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &37 2020-04-14 02:02:56.183623000 Z
+    zone: *2
+    time: *37
+19:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 8
+  start_date: 2020-08-01
+  end_date: 2020-08-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &38 2020-04-14 02:02:56.186460000 Z
+    zone: *2
+    time: *38
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &39 2020-04-14 02:02:56.186460000 Z
+    zone: *2
+    time: *39
+20:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 9
+  start_date: 2020-09-01
+  end_date: 2020-09-30
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &40 2020-04-14 02:02:56.189230000 Z
+    zone: *2
+    time: *40
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &41 2020-04-14 02:02:56.189230000 Z
+    zone: *2
+    time: *41
+21:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 10
+  start_date: 2020-10-01
+  end_date: 2020-10-31
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &42 2020-04-14 02:02:56.191942000 Z
+    zone: *2
+    time: *42
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &43 2020-04-14 02:02:56.191942000 Z
+    zone: *2
+    time: *43
+22:
+  guid: 
+  slug: 
+  period_year: '2020'
+  month_number: 11
+  start_date: 2020-11-01
+  end_date: 2020-11-30
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &44 2020-04-14 02:02:56.194577000 Z
+    zone: *2
+    time: *44
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &45 2020-04-14 02:02:56.194577000 Z
+    zone: *2
+    time: *45

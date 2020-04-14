@@ -29,6 +29,10 @@ client:string \
 startdate_id:integer \
 enddate_id:integer
 
+rails db:migrate
+
+rails test test/models/project_test.rb
 
 
 -- 
+rails db:fixtures:monthperiod

@@ -3,13 +3,12 @@ class CreateProjects < ActiveRecord::Migration[6.0]
     create_table :projects do |t|
       t.string :guid
       t.string :slug
-      t.string :ptitle
+      t.string :ptitle, :null => false
       t.string :psubtitle
       t.text :body
       t.string :client
-      t.integer :startdate_id
-      t.integer :enddate_id
-
+      t.references :startdate, references: :monthperiods, foreign_key: { to_table: :monthperiods}
+      t.references :enddate, references: :monthperiods, foreign_key: { to_table: :monthperiods}
       t.timestamps
     end
     add_index :projects, :guid, unique: true
