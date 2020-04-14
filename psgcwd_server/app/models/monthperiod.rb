@@ -1,0 +1,2 @@
+class Monthperiod < ApplicationRecord
+end

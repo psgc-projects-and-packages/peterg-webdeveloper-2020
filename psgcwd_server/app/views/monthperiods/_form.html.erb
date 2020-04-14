@@ -1,0 +1,47 @@
+<%= form_with(model: monthperiod, local: true) do |form| %>
+  <% if monthperiod.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(monthperiod.errors.count, "error") %> prohibited this monthperiod from being saved:</h2>
+
+      <ul>
+        <% monthperiod.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :guid %>
+    <%= form.text_field :guid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug %>
+  </div>
+
+  <div class="field">
+    <%= form.label :period_year %>
+    <%= form.text_field :period_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :month_number %>
+    <%= form.number_field :month_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

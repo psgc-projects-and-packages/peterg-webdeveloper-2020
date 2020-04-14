@@ -1,0 +1,30 @@
+
+rails db:create
+rails db:migrate
+rails s
+
+---
+
+rails g scaffold Monthperiod  \
+guid:string:uniq:null=true \
+slug:string:uniq:null=true \
+period_year:string:null=true \
+month_number:integer:unsigned:limit=2:null=true \
+start_date:date:null=true \
+end_date:date:null=true
+
+% edit migration file 
+
+rails db:migrate
+
+rails g scaffold Project \
+guid:string:uniq:null=true \
+slug:string:uniq:null=true \
+ptitle:string \
+psubtitle:string \
+body:text \
+client:string \
+startdate_id:integer \
+enddate_id:integer
+
+

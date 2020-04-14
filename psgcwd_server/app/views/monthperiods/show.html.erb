@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @monthperiod.guid %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @monthperiod.slug %>
+</p>
+
+<p>
+  <strong>Period year:</strong>
+  <%= @monthperiod.period_year %>
+</p>
+
+<p>
+  <strong>Month number:</strong>
+  <%= @monthperiod.month_number %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @monthperiod.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @monthperiod.end_date %>
+</p>
+
+<%= link_to 'Edit', edit_monthperiod_path(@monthperiod) %> |
+<%= link_to 'Back', monthperiods_path %>
