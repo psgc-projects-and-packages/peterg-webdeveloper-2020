@@ -1,0 +1,33 @@
+%%% Pre-config
+
+[/] rbenv versions
+
+[/] ruby -v
+
+[/] rvm list
+[/] rvm -v
+[/] rvm get stable
+[/] rvm install 2.7.1
+
+[/] gem -v
+[/] gem update --system
+[/] rvm gemset list
+[/] rvm gemset use global
+[/] gem list
+
+[/] gem update
+
+[/] gem install bundler
+[ ] gem install nokogiri
+[/] gem install rails
+[ ] gem install mysql2 -s http://rubygems.org
+
+%%% Create App
+
+rails new psgcwebdev_server -T --database=postgresql
+rails new psgcwebdev_server --database=mysql
+
+-T : no tests
+
+%%% Create Database
+[ ] rails s
