@@ -17,6 +17,8 @@ end_date:date:null=true
 
 rails db:migrate
 
+rails test test/models/monthperiod_test.rb
+
 rails g scaffold Project \
 guid:string:uniq:null=true \
 slug:string:uniq:null=true \
@@ -28,3 +30,5 @@ startdate_id:integer \
 enddate_id:integer
 
 
+
+-- 

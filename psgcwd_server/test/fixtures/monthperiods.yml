@@ -1,17 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  guid: MyString
-  slug: MyString
+  guid: 123
+  slug: foo
   period_year: MyString
   month_number: 1
   start_date: 2020-04-13
   end_date: 2020-04-13
 
 two:
-  guid: MyString
-  slug: MyString
+  guid: 789
+  slug: bar
   period_year: MyString
-  month_number: 1
+  month_number: 2
   start_date: 2020-04-13
   end_date: 2020-04-13
