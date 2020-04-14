@@ -1,0 +1,6 @@
+[ ] project migration
+[ ] project test
+[ ] guidable
+[ ] sluggable
+
+[ ] staging server

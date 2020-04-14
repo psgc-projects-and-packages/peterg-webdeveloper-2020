@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @project.guid %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @project.slug %>
+</p>
+
+<p>
+  <strong>Ptitle:</strong>
+  <%= @project.ptitle %>
+</p>
+
+<p>
+  <strong>Psubtitle:</strong>
+  <%= @project.psubtitle %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @project.body %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @project.client %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @project.startdate_id %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @project.enddate_id %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

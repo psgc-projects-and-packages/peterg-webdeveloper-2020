@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guid: MyString
+  slug: MyString
+  ptitle: MyString
+  psubtitle: MyString
+  body: MyText
+  client: MyString
+  startdate_id: 1
+  enddate_id: 1
+
+two:
+  guid: MyString
+  slug: MyString
+  ptitle: MyString
+  psubtitle: MyString
+  body: MyText
+  client: MyString
+  startdate_id: 1
+  enddate_id: 1

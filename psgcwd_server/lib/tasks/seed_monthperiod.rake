@@ -1,8 +1,7 @@
 require 'date'
 
-namespace :foo do
-  desc "Test script/task"
-  task :hello => :environment do
+namespace :devseed do
+  task :monthperiod => :environment do
     ActiveRecord::Base.connection.execute("TRUNCATE monthperiods")
 
     start_date = Time.local(1901)
