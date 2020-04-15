@@ -11,8 +11,10 @@ namespace :devseed do
       obj = Project.create!({
         ptitle: "Some Great New Project",
         client: "Acme Inc",
-        startdate_id: dates[:start_date].id,
-        enddate_id: dates[:end_date].id
+        startdate: dates[:start_date],
+        enddate: dates[:end_date]
+        #startdate_id: dates[:start_date].id,
+        #enddate_id: dates[:end_date].id
       })
     end
   end
