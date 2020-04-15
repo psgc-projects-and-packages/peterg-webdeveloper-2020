@@ -1,4 +1,5 @@
 require 'date'
+require 'faker'
 
 namespace :devseed do
   task :project => :environment do
@@ -9,17 +10,17 @@ namespace :devseed do
     (1...10).to_a.map do |o| 
       dates = get_dates
       obj = Project.create!({
-        ptitle: "Some Great New Project",
-        client: "Acme Inc",
+        ptitle: Faker::Company.bs,
+        client: Faker::Company.name,
         startdate: dates[:start_date],
         enddate: dates[:end_date]
-        #startdate_id: dates[:start_date].id,
-        #enddate_id: dates[:end_date].id
       })
     end
   end
 
   def get_dates
+
+    # Get 2 random dates
     max_y = Monthperiod.maximum('period_year').to_i
     min_y = Monthperiod.minimum('period_year').to_i
 
@@ -32,11 +33,13 @@ namespace :devseed do
       month_number: rand(1...12)
     ).first
 
+    # Choose earlier date as the start date
     if d1.start_date < d2.start_date
       r = {start_date:  d1, end_date: d2}
     elsif
       r = {start_date:  d2, end_date: d1}
     end
+
     return r
   end
 

@@ -9,8 +9,8 @@ namespace :devseed do
     start_date = Time.local(1901)
     end_date = Time.local(2000, 12, 31)
 
-    year_iter = 2019
-    end_year = 2020
+    year_iter = 1991
+    end_year = 2039
 
     while year_iter <= end_year
       # months
