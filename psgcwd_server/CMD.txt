@@ -34,5 +34,8 @@ rails db:migrate
 rails test test/models/project_test.rb
 
 
+
 -- 
 rails db:fixtures:monthperiod
+
+rails devseed:monthperiod

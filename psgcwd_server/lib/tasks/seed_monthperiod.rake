@@ -2,7 +2,9 @@ require 'date'
 
 namespace :devseed do
   task :monthperiod => :environment do
-    ActiveRecord::Base.connection.execute("TRUNCATE monthperiods")
+    #ActiveRecord::Base.connection.execute("TRUNCATE monthperiods")
+    Project.destroy_all
+    Monthperiod.destroy_all
 
     start_date = Time.local(1901)
     end_date = Time.local(2000, 12, 31)
