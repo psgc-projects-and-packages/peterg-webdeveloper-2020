@@ -1,6 +1,6 @@
 [ ] project migration
 [ ] project test
 [ ] guidable
-[ ] sluggable
+[ ] sluggable concern supporting multiple fields
 
 [ ] staging server

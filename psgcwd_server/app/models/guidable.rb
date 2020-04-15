@@ -7,6 +7,7 @@ module Guidable
     before_create :do_guid
   end
 
+
   def do_guid
     self.guid = SecureRandom.uuid if guid.blank?
   end
