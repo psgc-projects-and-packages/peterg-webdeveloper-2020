@@ -1,30 +1,18 @@
 module Sluggable
   extend ActiveSupport::Concern
 
-  #@@target_fields = []
-
   included do
     before_create :slugify
     class_attribute :target_fields
   end
 
-  #def self.included(base)
-  #  base.extend ClassMethods
-  #end
-
   def slugify
-    #str = @@target_fields.reduce('') { |a, s| a + "-" + self[s].to_s } 
     str = self.target_fields.reduce('') { |a, s| a + "-" + self[s].to_s } 
     self.slug = str.parameterize
   end
 
-  #def self.set_target_fields *fields 
-  #@@target_fields = fields
-  #Sluggable.target_fields = fields
-  #end
-
+  # methods defined here are going to extend the class, not the instance of it
   module ClassMethods
-    #attr_accessor :target_fields
     def set_target_fields(*fields)
       self.target_fields = fields
     end

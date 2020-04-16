@@ -3,5 +3,4 @@ class Monthperiod < ApplicationRecord
   include Sluggable
 
   self.set_target_fields :period_year, :month_number
-  #Sluggable.set_target_fields :period_year, :month_number
 end
