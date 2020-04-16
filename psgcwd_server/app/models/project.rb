@@ -5,7 +5,8 @@ class Project < ApplicationRecord
   belongs_to :startdate, class_name: :Monthperiod
   belongs_to :enddate, class_name: :Monthperiod
 
-  Sluggable.set_target_fields :ptitle
+  self.set_target_fields :ptitle
+  #Sluggable.set_target_fields :ptitle
   #Sluggable.set_target_fields :ptitle, :client
 
 #  before_create do
