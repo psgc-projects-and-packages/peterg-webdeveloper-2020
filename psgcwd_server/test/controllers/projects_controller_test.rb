@@ -17,7 +17,6 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create project" do
     assert_difference('Project.count') do
-      #post projects_url, params: { project: { body: @project.body, client: @project.client, enddate_id: @project.enddate_id, guid: @project.guid, psubtitle: @project.psubtitle, ptitle: @project.ptitle, slug: @project.slug, startdate_id: @project.startdate_id } }
       post projects_url, params: { project: { body: @project.body, client: @project.client, enddate_id: @project.enddate_id, psubtitle: @project.psubtitle, ptitle: @project.ptitle, startdate_id: @project.startdate_id } }
     end
 

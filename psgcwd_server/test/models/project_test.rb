@@ -14,5 +14,6 @@ class ProjectTest < ActiveSupport::TestCase
     obj.reload
     assert_equal 'Some Great New Project', obj.ptitle
     assert obj.guid != nil
+    assert obj.slug != nil
   end
 end
