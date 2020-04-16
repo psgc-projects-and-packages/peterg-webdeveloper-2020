@@ -1,0 +1,52 @@
+
+   def slugify
+     byebug
+     str = self.target_fields.reduce('') { |a, s| a + "-" + self[s].to_s } 
+     self.slug = str.parameterize
+   end
+
+  def self.included(base)
+    base.extend ClassMethods
+  end
+
+  module ClassMethods
+    @target_fields = []
+#    def slugify
+#      str = @target_fields.reduce('') { |a, s| a + "-" + self[s].to_s } 
+#      self.slug = str.parameterize
+#    end
+    def set_target_fields *fields 
+      #byebug
+      @target_fields = fields
+    end
+  end
+
+  ---
+module Sluggable
+  extend ActiveSupport::Concern
+
+  @target_fields = []
+
+  included do
+    before_create :slugify
+  end
+
+  def slugify
+    #str = @target_fields.reduce('') { |a, s| a + "-" + self[s].to_s } 
+    byebug
+    str = @target_fields.reduce('') { |a, s| a + "-" + self[s]} 
+    self.slug = str.parameterize
+  end
+
+# def self.target_fields *fields 
+#   #byebug
+#   @target_fields = fields
+# end
+
+
+end
+
+# [ ] %TODO - write unit test
+# [ ] %TODO https://stackoverflow.com/questions/45445744/how-to-create-a-common-after-create-callback-for-all-models
+
+# move to concern? - https://stackoverflow.com/questions/46422576/how-do-i-reference-model-attributes-in-module-instance-methods-in-ror-5

@@ -8,7 +8,7 @@ module Sluggable
   end
 
   def slugify
-    str = @@target_fields.reduce('') { |a, s| a + "-" + self[s] } 
+    str = @@target_fields.reduce('') { |a, s| a + "-" + self[s].to_s } 
     self.slug = str.parameterize
   end
 
