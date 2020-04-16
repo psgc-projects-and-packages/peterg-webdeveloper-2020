@@ -1,6 +1,6 @@
-[ ] project migration
+[/] project migration
 [ ] project test
-[ ] guidable
-[ ] sluggable concern supporting multiple fields
+[/] guidable
+[/] sluggable concern supporting multiple fields
 
-[ ] staging server
+[ ] staging server - EBS?

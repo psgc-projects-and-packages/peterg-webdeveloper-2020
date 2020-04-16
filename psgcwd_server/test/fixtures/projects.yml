@@ -7,8 +7,8 @@ one:
   psubtitle: My Subtitle
   body: My Long Body text
   client: My Client
-  startdate_id: 1
-  enddate_id: 1
+  startdate: one
+  enddate: two
 
 two:
   guid: 555
@@ -17,5 +17,5 @@ two:
   psubtitle: My Subtitle
   body: My Long Body text
   client: My Client
-  startdate_id: 1
-  enddate_id: 1
+  startdate: one
+  enddate: two

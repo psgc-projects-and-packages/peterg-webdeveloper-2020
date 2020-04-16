@@ -1,3 +1,5 @@
+rake 'log:clear'
+----
 
 rails db:create
 rails db:migrate

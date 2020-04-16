@@ -3,6 +3,7 @@ require 'test_helper'
 class MonthperiodsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @monthperiod = monthperiods(:one)
+    @mptmp = monthperiods(:mptmp)
   end
 
   test "should get index" do
@@ -39,8 +40,10 @@ class MonthperiodsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy monthperiod" do
+    # %PSG: add a new one that has no FK references to test delete
+    post monthperiods_url, params: { monthperiod: { end_date: @mptmp.end_date, guid: @mptmp.guid, month_number: @mptmp.month_number, period_year: @mptmp.period_year, slug: @mptmp.slug, start_date: @mptmp.start_date } }
     assert_difference('Monthperiod.count', -1) do
-      delete monthperiod_url(@monthperiod)
+      delete monthperiod_url(@mptmp)
     end
 
     assert_redirected_to monthperiods_url
