@@ -4,3 +4,11 @@
 [/] sluggable concern supporting multiple fields
 
 [ ] staging server - EBS?
+
+--
+
+CI
+RDS/baks
+SSL
+EBS
+cost & complexity
