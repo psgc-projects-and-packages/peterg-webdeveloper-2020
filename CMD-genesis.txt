@@ -24,10 +24,15 @@
 
 %%% Create App
 
-rails new psgcwebdev_server -T --database=postgresql
-rails new psgcwebdev_server --database=mysql
-
--T : no tests
+rails new psgcwd_server --database=mysql
 
 %%% Create Database
 [ ] rails s
+
+%%% https://askubuntu.com/questions/876595/i-got-message-this-message-in-rails-the-dependency-tzinfo-data
+[/] bundle lock --add-platform mingw, mswin, x64_mingw, jruby
+
+%%% Dev seeders
+rails devseed:monthperiod
+
+bundle install

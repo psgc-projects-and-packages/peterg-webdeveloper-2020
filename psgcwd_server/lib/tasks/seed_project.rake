@@ -7,10 +7,12 @@ namespace :devseed do
 
     #byebug
 
-    (1...10).to_a.map do |o| 
+    (1...20).to_a.map do |o| 
       dates = get_dates
       obj = Project.create!({
         ptitle: Faker::Company.bs,
+        psubtitle: Faker::Lorem.sentence,
+        body: Faker::Lorem.paragraphs.join("\n\n"),
         client: Faker::Company.name,
         startdate: dates[:start_date],
         enddate: dates[:end_date]
