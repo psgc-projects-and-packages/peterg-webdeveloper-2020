@@ -12,3 +12,5 @@ RDS/baks
 SSL
 EBS
 cost & complexity
+
+https://www.taniarascia.com/crud-app-in-react-with-hooks/
