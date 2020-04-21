@@ -1,59 +1,80 @@
-import React from 'react'
+import React, { Fragment, Component } from 'react'
+import axios from 'axios'
 
-const ProjectList = props => {
+class ProjectList extends Component {
 
-  const { projects, deleteProject, editRow } = props
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      items: []
+    };
+  }
 
-  const guid = 'tmp-guid';
-  const slug = 'tmp-slug';
-  const ptitle = 'tmp-ptitle';
-  const body = 'tmp-body';
-  console.log('projects', projects );
+  componentDidMount() {
+    // %TODO: error handling
+    //axios.get(`https://jsonplaceholder.typicode.com/todos`)
+    axios.get(`/projects.json`)
+      .then(res => {
+        const items = res.data
+        this.setState({ isLoaded: true, items })
+        console.log('ProjectList loaded...')
+      });
+  }
 
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th>GUID</th>
-          <th>Slug</th>
-          <th>Title</th>
-          <th>Contents</th>
-        </tr>
-      </thead>
-      <tbody>
-        {projects.length > 0 ? (
-          projects.map(iter => (
-            <tr key={iter.id}>
-              <td>{iter.guid}</td>
-              <td>{iter.slug}</td>
-              <td>{iter.ptitle}</td>
-              <td>{iter.body}</td>
-              <td>
-                <button
-                  onClick={() => {
-                    editRow(iter)
-                  }}
-                  className="button muted-button"
-                >
-                  Edit
-                </button>
-                <button
-                  onClick={() => deleteProject(iter.id)}
-                  className="button muted-button"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))
-        ) : (
-          <tr>
-            <td colSpan={3}>No projects</td>
-          </tr>
-        )}
-      </tbody>
-    </table>
-  )
+  deleteProject() {
+    console.log('delete project stub')
+  }
+  editRow() {
+    console.log('edit row stub')
+  }
+
+
+  render () {
+    return (
+      <Fragment>
+        {this.state.isLoaded ? (
+          <table>
+            <thead>
+              <tr>
+                <th>GUID</th>
+                <th>Slug</th>
+                <th>Title</th>
+                <th>Contents</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.items.length > 0 ? (
+                this.state.items.map(iter => (
+                  <tr key={iter.id}>
+                    <td>{iter.guid}</td>
+                    <td>{iter.slug}</td>
+                    <td>{iter.ptitle}</td>
+                    <td>{iter.body}</td>
+                    <td>
+                      <button
+                        onClick={() => { this.state.editRow(iter) }}
+                        className="button muted-button"
+                      > Edit</button>
+                      <button
+                        onClick={() => this.state.deleteProject(iter.id)}
+                        className="button muted-button"
+                      > Delete</button></td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan={3}>No projects</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        ) : (<p>Loading...</p>)
+        }
+      </Fragment>
+    )
+  }
+
 }
-
 export default ProjectList

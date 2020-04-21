@@ -1,30 +1,10 @@
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import ProjectList from "./project/ProjectList"
-import axios from 'axios'
+import ProjectEdit from "./project/ProjectEdit"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 class AdminHome extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      items: []
-    };
-  }
-
-  componentDidMount() {
-    // %TODO: error handling
-    //axios.get(`https://jsonplaceholder.typicode.com/todos`)
-    axios.get(`/projects.json`)
-      .then(res => {
-        //const items = res.data.map(obj => obj.data);
-        const items = res.data
-        this.setState({ isLoaded: true, items })
-        console.log('loaded...')
-      });
-  }
 
   deleteProject() {
     console.log('delete project stub')
@@ -35,18 +15,20 @@ class AdminHome extends React.Component {
 
   render () {
     return (
-      <React.Fragment>
+      <Fragment>
         Greeting: {this.props.greeting}
         <p>Some text here NOW JSX</p>
-        { this.state.isLoaded ?
-        (<ProjectList 
-          projects={this.state.items} 
-          deleteProject={ () => deleteProject } 
-          editRow={ () => editRow } 
-        />)
-        : (<p>Loading...</p>)
-        }
-      </React.Fragment>
+        <Router>
+          <Switch>
+            <Route exact path="/admin/dashboard/project/:id/edit">
+              <ProjectEdit foo="op1"/>
+            </Route>
+            <Route exact path="/admin/dashboard">
+              <ProjectList />
+            </Route>
+          </Switch>
+        </Router>
+      </Fragment>
     );
   }
 }

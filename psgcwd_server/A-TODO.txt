@@ -14,3 +14,6 @@ EBS
 cost & complexity
 
 https://www.taniarascia.com/crud-app-in-react-with-hooks/
+
+http://localhost:3000/admin/dashboard
+http://localhost:3000/admin/dashboard/project/5/edit
