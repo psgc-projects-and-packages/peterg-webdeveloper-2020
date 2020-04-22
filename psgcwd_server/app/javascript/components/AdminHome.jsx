@@ -20,7 +20,7 @@ class AdminHome extends React.Component {
         <p>Some text here NOW JSX</p>
         <Router>
           <Switch>
-            <Route exact path="/admin/dashboard/project/:id/edit">
+            <Route exact path="/admin/dashboard/project/:slug/edit">
               <ProjectEdit foo="op1"/>
             </Route>
             <Route exact path="/admin/dashboard">

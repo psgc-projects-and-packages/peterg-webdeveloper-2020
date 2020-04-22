@@ -1,7 +1,10 @@
 import React, { Fragment, Component } from 'react'
+import { Link } from "react-router-dom"
 import axios from 'axios'
 
 class ProjectList extends Component {
+
+  _isMounted = false;
 
   constructor(props) {
     super(props);
@@ -13,13 +16,16 @@ class ProjectList extends Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
     // %TODO: error handling
     //axios.get(`https://jsonplaceholder.typicode.com/todos`)
     axios.get(`/projects.json`)
       .then(res => {
-        const items = res.data
-        this.setState({ isLoaded: true, items })
-        console.log('ProjectList loaded...')
+        if (this._isMounted) {
+          const items = res.data
+          this.setState({ isLoaded: true, items })
+          console.log('ProjectList loaded...')
+        }
       });
   }
 
@@ -31,7 +37,12 @@ class ProjectList extends Component {
   }
 
 
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
   render () {
+
     return (
       <Fragment>
         {this.state.isLoaded ? (
@@ -53,10 +64,7 @@ class ProjectList extends Component {
                     <td>{iter.ptitle}</td>
                     <td>{iter.body}</td>
                     <td>
-                      <button
-                        onClick={() => { this.state.editRow(iter) }}
-                        className="button muted-button"
-                      > Edit</button>
+                      <Link to={`/admin/dashboard/project/${iter.slug}/edit`}>Edit</Link>
                       <button
                         onClick={() => this.state.deleteProject(iter.id)}
                         className="button muted-button"
